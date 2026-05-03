@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/8PpB2J6y/web-dev.png",
+    "image": "/products/web.jpg",
     "category": "Programming"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Master modern frontend development with React and Next.js.",
-    "image": "https://i.postimg.cc/QxY2w7cM/react-course.png",
+    "image": "/products/next.jpg",
     "category": "Programming"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Analyze data and build models using Python.",
-    "image": "https://i.postimg.cc/fRkq2z3W/python.png",
+    "image": "/products/python.jpg",
     "category": "Programming"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Understand core principles of business and management.",
-    "image": "https://i.postimg.cc/Y0Zy1XnF/marketing.png",
+    "image": "/products/b_principles.jpg",
     "category": "Business Management"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Learn how to start and grow your own business.",
-    "image": "https://i.postimg.cc/DZk1bJcF/freelance.png",
+    "image": "/products/startup.jpg",
     "category": "Business Management"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Intermediate",
     "description": "Master SEO, social media, and brand strategy.",
-    "image": "https://i.postimg.cc/Y0Zy1XnF/marketing.png",
+    "image": "/products/marketing.jpg",
     "category": "Business Management"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Design user-friendly and modern interfaces.",
-    "image": "https://i.postimg.cc/mg2rKXbM/uiux.png",
+    "image": "/products/ui.jpg",
     "category": "Creative Arts"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.4,
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and core design skills.",
-    "image": "https://i.postimg.cc/1t0XcG9H/design.png",
+    "image": "/products/graphic.jpg",
     "category": "Creative Arts"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Create engaging animations and motion graphics.",
-    "image": "https://i.postimg.cc/4xZk3vJx/ml.png",
+    "image": "/products/animation.jpg",
     "category": "Creative Arts"
   }
 ]
