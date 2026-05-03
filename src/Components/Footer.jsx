@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       
-      <div className="absolute inset-0 -z-10 bg-[#203010]" />
+      <div className="absolute inset-0 -z-10 bg-[#133C55]" />
 
       
       <div
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               
-              <h2 className="text-xl font-semibold tracking-tight text-[#B0D070]">
+              <h2 className="text-xl font-semibold tracking-tight text-[#91E5F6]">
                 SkillSphere
               </h2>
             </div>
@@ -35,14 +35,14 @@ const Footer = () => {
 
           
           <div>
-            <h3 className="text-sm font-semibold text-[#B0D070] mb-4">
+            <h3 className="text-sm font-semibold text-[#91E5F6] mb-4">
               Course Category
             </h3>
             <ul className="space-y-3 text-sm text-white">
               <li>
                 <Link
                   href="/generate"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   Programming
                 </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/all-photos"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   Business Management
                 </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/pricing"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   Creative Arts
                 </Link>
@@ -68,14 +68,14 @@ const Footer = () => {
 
           
           <div>
-            <h3 className="text-sm font-semibold text-[#B0D070] mb-4">
+            <h3 className="text-sm font-semibold text-[#91E5F6] mb-4">
               Company
             </h3>
             <ul className="space-y-3 text-sm text-white">
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   About
                 </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   Contact
                 </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-[#B0D070] transition"
+                  className="hover:text-[#84D2F6] transition"
                 >
                   Terms
                 </Link>
@@ -101,7 +101,7 @@ const Footer = () => {
 
           
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-[#B0D070]">
+            <h3 className="text-sm font-semibold text-[#91E5F6]">
               Start creating
             </h3>
 

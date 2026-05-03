@@ -1,3 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+.animate__backInLeft {
+  --animate-duration: 2s;
+}
