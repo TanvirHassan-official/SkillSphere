@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.postimg.cc/8PpB2J6y/web-dev.png",
+    "category": "Programming"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React & Next.js",
+    "instructor": "Sarah Ahmed",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master modern frontend development with React and Next.js.",
+    "image": "https://i.postimg.cc/QxY2w7cM/react-course.png",
+    "category": "Programming"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "instructor": "Michael Brown",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Analyze data and build models using Python.",
+    "image": "https://i.postimg.cc/fRkq2z3W/python.png",
+    "category": "Programming"
+  },
+  {
+    "id": 4,
+    "title": "Business Management Fundamentals",
+    "instructor": "David Khan",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Understand core principles of business and management.",
+    "image": "https://i.postimg.cc/Y0Zy1XnF/marketing.png",
+    "category": "Business Management"
+  },
+  {
+    "id": 5,
+    "title": "Entrepreneurship & Startup Guide",
+    "instructor": "Ayesha Rahman",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn how to start and grow your own business.",
+    "image": "https://i.postimg.cc/DZk1bJcF/freelance.png",
+    "category": "Business Management"
+  },
+  {
+    "id": 6,
+    "title": "Digital Marketing & Branding",
+    "instructor": "Emily Carter",
+    "duration": "15 hours",
+    "rating": 4.5,
+    "level": "Intermediate",
+    "description": "Master SEO, social media, and brand strategy.",
+    "image": "https://i.postimg.cc/Y0Zy1XnF/marketing.png",
+    "category": "Business Management"
+  },
+  {
+    "id": 7,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Chris Evans",
+    "duration": "15 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Design user-friendly and modern interfaces.",
+    "image": "https://i.postimg.cc/mg2rKXbM/uiux.png",
+    "category": "Creative Arts"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design Fundamentals",
+    "instructor": "Nusrat Jahan",
+    "duration": "10 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator, and core design skills.",
+    "image": "https://i.postimg.cc/1t0XcG9H/design.png",
+    "category": "Creative Arts"
+  },
+  {
+    "id": 9,
+    "title": "Animation & Motion Graphics",
+    "instructor": "David Lee",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Create engaging animations and motion graphics.",
+    "image": "https://i.postimg.cc/4xZk3vJx/ml.png",
+    "category": "Creative Arts"
+  }
+]

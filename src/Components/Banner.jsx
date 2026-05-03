@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="space-y-4">
           
           <h1 className="text-3xl md:text-5xl font-bold mb-8 ">
-        Unlock your future with <span className="inline-block text-[#59A5D8] font-extrabold animate__animated animate__fadeInUp">SkillSphere</span>
+        Unlock your future with <span className="inline-block text-[#59A5D8] font-extrabold animate__animated animate__fadeInLeft">SkillSphere</span>
       </h1>
 
           <p className="text-md text-black max-w-lg opacity-80">
