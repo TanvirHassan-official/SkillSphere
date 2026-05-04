@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "title": "Advanced React & Next.js",
+    "title": "Advanced React & Next.js Development",
     "instructor": "Sarah Ahmed",
     "duration": "18 hours",
     "rating": 4.7,
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "title": "Python for Data Science",
+    "title": "Python Course for Data Science",
     "instructor": "Michael Brown",
     "duration": "22 hours",
     "rating": 4.9,
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "title": "UI/UX Design Masterclass",
+    "title": "UI/UX Design Beginner Masterclass",
     "instructor": "Chris Evans",
     "duration": "15 hours",
     "rating": 4.6,

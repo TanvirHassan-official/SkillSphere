@@ -6,7 +6,7 @@ import 'animate.css';
 
 const Banner = () => {
     return (
-    <div className="relative min-h-162.5 flex items-center overflow-hidden px-5 md:px-20 lg:px-40 py-10 lg:py-0">
+    <div className="relative bg-[#d7eeff] min-h-162.5 flex items-center overflow-hidden px-5 md:px-20 lg:px-40 py-10 lg:py-0">
       <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10">
         {/* Left Content */}
         <div className="space-y-4">
