@@ -8,7 +8,14 @@
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
     "image": "/products/web.jpg",
-    "category": "Programming"
+    "category": "Programming",
+    "whatYouWillLearn": [
+      "HTML, CSS, and JavaScript fundamentals",
+      "Responsive web design principles",
+      "Backend basics with Node.js and Express",
+      "Working with databases (MongoDB)",
+      "Deploying full-stack applications"
+    ]
   },
   {
     "id": 2,
@@ -19,7 +26,14 @@
     "level": "Intermediate",
     "description": "Master modern frontend development with React and Next.js.",
     "image": "/products/next.jpg",
-    "category": "Programming"
+    "category": "Programming",
+    "whatYouWillLearn": [
+      "Advanced React hooks and patterns",
+      "State management techniques",
+      "Server-side rendering with Next.js",
+      "API integration and optimization",
+      "Performance optimization and deployment"
+    ]
   },
   {
     "id": 3,
@@ -30,7 +44,14 @@
     "level": "Intermediate",
     "description": "Analyze data and build models using Python.",
     "image": "/products/python.jpg",
-    "category": "Programming"
+    "category": "Programming",
+    "whatYouWillLearn": [
+      "Python programming fundamentals",
+      "Data analysis with Pandas and NumPy",
+      "Data visualization techniques",
+      "Introduction to machine learning",
+      "Working with real-world datasets"
+    ]
   },
   {
     "id": 4,
@@ -41,7 +62,14 @@
     "level": "Beginner",
     "description": "Understand core principles of business and management.",
     "image": "/products/b_principles.jpg",
-    "category": "Business Management"
+    "category": "Business Management",
+    "whatYouWillLearn": [
+      "Principles of management and leadership",
+      "Organizational structure and strategy",
+      "Financial basics for businesses",
+      "Decision-making and problem-solving",
+      "Effective communication in business"
+    ]
   },
   {
     "id": 5,
@@ -52,7 +80,14 @@
     "level": "Beginner",
     "description": "Learn how to start and grow your own business.",
     "image": "/products/startup.jpg",
-    "category": "Business Management"
+    "category": "Business Management",
+    "whatYouWillLearn": [
+      "How to validate business ideas",
+      "Building a startup business plan",
+      "Funding and investment basics",
+      "Marketing strategies for startups",
+      "Scaling and growth strategies"
+    ]
   },
   {
     "id": 6,
@@ -63,7 +98,14 @@
     "level": "Intermediate",
     "description": "Master SEO, social media, and brand strategy.",
     "image": "/products/marketing.jpg",
-    "category": "Business Management"
+    "category": "Business Management",
+    "whatYouWillLearn": [
+      "Search Engine Optimization (SEO)",
+      "Social media marketing strategies",
+      "Content marketing and branding",
+      "Email marketing campaigns",
+      "Analytics and performance tracking"
+    ]
   },
   {
     "id": 7,
@@ -74,7 +116,14 @@
     "level": "Beginner",
     "description": "Design user-friendly and modern interfaces.",
     "image": "/products/ui.jpg",
-    "category": "Creative Arts"
+    "category": "Creative Arts",
+    "whatYouWillLearn": [
+      "UI/UX design principles",
+      "Wireframing and prototyping",
+      "User research and testing",
+      "Design tools like Figma",
+      "Creating intuitive user experiences"
+    ]
   },
   {
     "id": 8,
@@ -85,7 +134,14 @@
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and core design skills.",
     "image": "/products/graphic.jpg",
-    "category": "Creative Arts"
+    "category": "Creative Arts",
+    "whatYouWillLearn": [
+      "Basics of graphic design theory",
+      "Using Photoshop and Illustrator",
+      "Typography and color theory",
+      "Logo and branding design",
+      "Creating marketing materials"
+    ]
   },
   {
     "id": 9,
@@ -96,6 +152,13 @@
     "level": "Intermediate",
     "description": "Create engaging animations and motion graphics.",
     "image": "/products/animation.jpg",
-    "category": "Creative Arts"
+    "category": "Creative Arts",
+    "whatYouWillLearn": [
+      "Principles of animation",
+      "Using After Effects",
+      "Motion graphics techniques",
+      "Story boarding and visual storytelling",
+      "Exporting and publishing animations"
+    ]
   }
 ]

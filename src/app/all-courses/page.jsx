@@ -2,7 +2,7 @@ import Courses from "@/Components/Courses";
 
 
 const AllCourses = async () => {
-    // const {category} = await Params;
+    
     const res = await fetch('https://skillsphere-rosy.vercel.app/data.json')
 
     const courses = await res.json()
