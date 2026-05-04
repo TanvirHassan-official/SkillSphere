@@ -10,7 +10,7 @@ const AllCourses = async () => {
     // const filteredPhotos = category ? photos.filter(photo => photo.category.toLowerCase() == category.toLowerCase()) : photos
     // console.log(filteredPhotos)
     return (
-        < div className="px-5 md:px-20 lg:px-40">
+        < div className="px-5 md:px-20 lg:px-40 mb-10">
             <div className="grid gap-3 items-center my-10">
                 <h1 className="text-5xl font-bold text-center text-[#133C55]">All Courses</h1>
                 <p className="text-xl text-center text-[#133C55] opacity-80">Browse all courses and find the perfect path to grow your skills.</p>

@@ -14,7 +14,7 @@ const topCourses = courses
   : [];
      console.log(topCourses)
     return (
-        < div className="px-5 md:px-20 lg:px-40">
+        < div className="px-5 md:px-20 lg:px-40 my-20">
             <div className="grid gap-3 items-center my-10">
                 <h1 className="text-5xl font-bold text-center text-[#133C55]">Top Courses</h1>
                 <p className="text-xl text-center text-[#133C55] opacity-80">Browse best courses and find the perfect path to grow your skills.</p>
