@@ -1,28 +1,29 @@
 import Link from "next/link";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <footer className="relative">
       <div className=" h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
-      
+
       <div className="absolute inset-0 -z-10 bg-[#133C55]" />
 
-      
+
       <div
         className="absolute inset-0 -z-10 bg-linear-to-tr 
         from-purple-500/10 dark:to-blue-500/10 blur-3xl"
       />
 
-      
+
       <div className="max-w-7xl mx-auto px-6 py-16">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          
+
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              
+
               <h2 className="text-xl font-semibold tracking-tight text-[#91E5F6]">
                 SkillSphere
               </h2>
@@ -33,7 +34,7 @@ const Footer = () => {
             </p>
           </div>
 
-          
+
           <div>
             <h3 className="text-sm font-semibold text-[#91E5F6] mb-4">
               Course Category
@@ -66,7 +67,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          
+
           <div>
             <h3 className="text-sm font-semibold text-[#91E5F6] mb-4">
               Company
@@ -74,10 +75,10 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-white">
               <li>
                 <Link
-                  href="/about"
+                  href="/policy"
                   className="hover:text-[#84D2F6] transition"
                 >
-                  About
+                  Privacy Policy
                 </Link>
               </li>
               <li>
@@ -85,7 +86,7 @@ const Footer = () => {
                   href="/contact"
                   className="hover:text-[#84D2F6] transition"
                 >
-                  Contact
+                  Contact Info
                 </Link>
               </li>
               <li>
@@ -93,13 +94,13 @@ const Footer = () => {
                   href="/terms"
                   className="hover:text-[#84D2F6] transition"
                 >
-                  Terms
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
           </div>
 
-          
+
           <div className="space-y-4">
             <h3 className="text-sm font-semibold text-[#91E5F6]">
               Start creating
@@ -109,22 +110,33 @@ const Footer = () => {
               Start the exciting journey today.
             </p>
 
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-white text-black 
-              text-sm font-medium transition-all duration-200 
-              hover:scale-[1.02] hover:shadow-lg hover:shadow-white/10"
+
+
+            <div className="flex gap-4 text-2xl text-[#84D2F6]">
+                          <Link
+              href="/facebook"
             >
-              Get Started
+              <FontAwesomeIcon icon={faFacebook} />
             </Link>
+                          <Link
+              href="/instagram"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link>
+                          <Link
+              href="/x"
+            >
+              <FontAwesomeIcon icon={faXTwitter} />
+            </Link>
+
+            </div>
           </div>
         </div>
 
-        
+
         <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-white/10" />
 
-        
+
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p>© {new Date().getFullYear()} SkillSphere. All rights reserved.</p>
 

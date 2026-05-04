@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-undef */
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -27,7 +29,10 @@ const Courses =({course}) => {
                                              <span className="font-bold">{course.rating}</span></p>
                                     </div>
                                     <div className="card-actions justify-end">
+                                        <Link href={'/all-courses/${course.id}'}>
                                         <button className="btn btn-block border hover:border-[#59A5D8] bg-[#386FA4] hover:bg-white hover:text-black text-white rounded-xl">Course Details</button>
+                                        </Link>
+                                        
                                     </div>
                                 </div>
                             </div>

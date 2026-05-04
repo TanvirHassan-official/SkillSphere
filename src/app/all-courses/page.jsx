@@ -7,8 +7,6 @@ const AllCourses = async () => {
 
     const courses = await res.json()
 
-    // const filteredPhotos = category ? photos.filter(photo => photo.category.toLowerCase() == category.toLowerCase()) : photos
-    // console.log(filteredPhotos)
     return (
         < div className="px-5 md:px-20 lg:px-40 mb-10">
             <div className="grid gap-3 items-center my-10">
