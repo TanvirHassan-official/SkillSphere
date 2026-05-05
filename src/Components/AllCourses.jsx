@@ -43,8 +43,8 @@ const AllCourses = ({ courses }) => {
 
 
 
-          <Suspense fallback={<Loader />}>
-            <div key={course.id}>
+          <Suspense key={course.id} fallback={<Loader />}>
+            <div >
               <Courses course={course} />
             </div>
           </Suspense>
