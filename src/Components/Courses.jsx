@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +14,6 @@ const Courses = ({ course }) => {
                 <figure className="relative w-full aspect-square">
                     <img src={course.image} alt={course.title}
                         className="object-cover rounded-xl w-full h-full"
-
 
                     />
                 </figure>
