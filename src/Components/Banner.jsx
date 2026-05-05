@@ -46,7 +46,7 @@ const Banner = () => {
             <img
               className="relative h-130 w-auto object-contain drop-shadow-2xl rounded-2xl"
               src={"/assets/Collaboration.png"}
-              alt="Clicking for the best tools"
+              alt="Discussion for the best courses"
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ const TopFac = () => {
                             <div className="card bg-base-100 w-full shadow-sm rounded-2xl">
                                 
                                 <figure className="relative w-full aspect-square">
-                                    <img src="/assets/Collaboration.png" alt="Faculty photo"
+                                    <img src="/assets/t1.jpg" alt="Faculty photo"
                                     className="object-cover rounded-xl w-full h-full"
                                     
                                     
@@ -33,30 +33,30 @@ const TopFac = () => {
                             <div className="card bg-base-100 w-full shadow-sm rounded-2xl">
                                 
                                 <figure className="relative w-full aspect-square">
-                                    <img src="/assets/Collaboration.png" alt="Faculty photo"
+                                    <img src="/assets/t2.jpg" alt="Faculty photo"
                                     className="object-cover rounded-xl w-full h-full"
                                     
                                     
                                     />
                                 </figure>
                                 <div className="card-body space-y-2">
-                                    <h2 className="card-title text-lg sm:text-xl md:text-2xl">Alex Doe</h2>
-                                    <p className="opacity-80 text-sm sm:text-base">100+ courses. 4.8 Rating.</p>
+                                    <h2 className="card-title text-lg sm:text-xl md:text-2xl">Mark Son</h2>
+                                    <p className="opacity-80 text-sm sm:text-base">60+ courses. 4.9 Rating.</p>
 
                                 </div>
                             </div>
                             <div className="card bg-base-100 w-full shadow-sm rounded-2xl">
                                 
                                 <figure className="relative w-full aspect-square">
-                                    <img src="/assets/Collaboration.png" alt="Faculty photo"
+                                    <img src="/assets/t3.jpg" alt="Faculty photo"
                                     className="object-cover rounded-xl w-full h-full"
                                     
                                     
                                     />
                                 </figure>
                                 <div className="card-body space-y-2">
-                                    <h2 className="card-title text-lg sm:text-xl md:text-2xl">Alex Doe</h2>
-                                    <p className="opacity-80 text-sm sm:text-base">100+ courses. 4.8 Rating.</p>
+                                    <h2 className="card-title text-lg sm:text-xl md:text-2xl">David Lee</h2>
+                                    <p className="opacity-80 text-sm sm:text-base">20+ courses. 4.6 Rating.</p>
 
                                 </div>
                             </div>

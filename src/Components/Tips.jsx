@@ -14,7 +14,7 @@ const Tips = () => {
                     {/* Left Content */}
                     <div className="space-y-4">
 
-                        <h1 className="text-3xl md:text-5xl font-bold mb-8 ">
+                        <h1 className="text-2xl md:text-4xl font-bold mb-8 ">
                             1. Learn in Short, Focused Sessions
                         </h1>
 
@@ -30,7 +30,7 @@ const Tips = () => {
                         <div className="relative">
                             <img
                                 className="relative h-96 w-auto object-contain drop-shadow-2xl rounded-2xl py-8"
-                                src={"/assets/Collaboration.png"}
+                                src={"/assets/focus.jpg"}
                                 alt="Clicking for the best tools"
                             />
                         </div>
@@ -47,7 +47,7 @@ const Tips = () => {
                         <div className="relative">
                             <img
                                 className="relative h-96 w-auto object-contain drop-shadow-2xl rounded-2xl py-8"
-                                src={"/assets/Collaboration.png"}
+                                src={"/assets/c.jpg"}
                                 alt="Clicking for the best tools"
                             />
                         </div>
@@ -55,14 +55,12 @@ const Tips = () => {
                     {/* right Content */}
                     <div className="space-y-4">
 
-                        <h1 className="text-3xl md:text-5xl font-bold mb-8 ">
-                            1. Learn in Short, Focused Sessions
+                        <h1 className="text-2xl md:text-4xl font-bold mb-8 ">
+                            2. Practice Consistently with Real Projects
                         </h1>
 
                         <p className="text-md text-black max-w-lg opacity-80">
-                            Discover a wide range of expert-led courses tailored to your personal and professional
-                            growth. Learn at your own pace, access resources anytime, and unlock new
-                            opportunities with flexible, high-quality education designed for modern learners.
+                            Apply what you learn through hands-on projects, case studies, or real-world tasks. This helps you retain knowledge better and build practical skills that employers actually value.
                         </p>
                     </div>
 
@@ -74,14 +72,12 @@ const Tips = () => {
                     {/* Left Content */}
                     <div className="space-y-4">
 
-                        <h1 className="text-3xl md:text-5xl font-bold mb-8 ">
-                            1. Learn in Short, Focused Sessions
+                        <h1 className="text-2xl md:text-4xl font-bold mb-8 ">
+                            3. Set Clear Goals and Track Progress
                         </h1>
 
                         <p className="text-md text-black max-w-lg opacity-80">
-                            Discover a wide range of expert-led courses tailored to your personal and professional
-                            growth. Learn at your own pace, access resources anytime, and unlock new
-                            opportunities with flexible, high-quality education designed for modern learners.
+                            Define what you want to achieve before you start learning, then break it into small milestones. Regularly reviewing your progress keeps you motivated and helps you stay focused on your long-term success.
                         </p>
                     </div>
 
@@ -90,7 +86,7 @@ const Tips = () => {
                         <div className="relative">
                             <img
                                 className="relative h-96 w-auto object-contain drop-shadow-2xl rounded-2xl py-8"
-                                src={"/assets/Collaboration.png"}
+                                src={"/assets/goals.jpg"}
                                 alt="Clicking for the best tools"
                             />
                         </div>
