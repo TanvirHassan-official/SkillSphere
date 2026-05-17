@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import GoogleLogin from "@/Components/GoogleLogin";
 
 export default function SignInPage() {
     const router = useRouter();
@@ -110,6 +111,8 @@ export default function SignInPage() {
                             )}
                         </button>
                     </form>
+
+                    <GoogleLogin></GoogleLogin>
                 </div>
 
                 {/* Footer note */}

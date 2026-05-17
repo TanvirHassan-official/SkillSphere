@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
@@ -7,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import GoogleLogin from "@/Components/GoogleLogin";
 
 export default function SignUpPage() {
     const router = useRouter();
@@ -32,6 +32,7 @@ export default function SignUpPage() {
             password,
             image,
         });
+        console.log(data);
 
         setLoading(false);
 
@@ -157,6 +158,8 @@ export default function SignUpPage() {
                             </button>
                         </div>
                     </form>
+
+                    <GoogleLogin></GoogleLogin>
                 </div>
 
                 {/* Footer note */}
