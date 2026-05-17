@@ -78,6 +78,10 @@ export default function SignUpPage() {
                     />
                 </div>
 
+                <span className="text-sm text-gray-500">
+                    Please enter a valid email address
+                </span>
+
                 {/* Email */}
                 <div className="form-control flex gap-4">
                     <label className="label">
@@ -93,9 +97,7 @@ export default function SignUpPage() {
                     />
 
                 </div>
-                <span className="text-sm text-gray-500">
-                    Please enter a valid email address
-                </span>
+
 
                 {/* Password */}
                 <div className="form-control flex gap-4">

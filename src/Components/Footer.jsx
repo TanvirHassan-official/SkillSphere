@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
 
             <p className="text-sm leading-relaxed text-white max-w-xs">
-              Join our courses to enrich your skills, knowledge and life.
+               Join our courses to enrich your skills, knowledge and life.
             </p>
           </div>
 
