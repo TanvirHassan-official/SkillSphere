@@ -21,7 +21,7 @@ export function getAuth() {
     emailAndPassword: {
       enabled: true,
     },
-  });
+  }); 
 
   return authInstance;
 }
