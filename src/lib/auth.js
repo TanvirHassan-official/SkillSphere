@@ -17,7 +17,7 @@ export function getAuth() {
   const db = client.db("skillsphere");
 
   authInstance = betterAuth({
-    database: mongodbAdapter(db, { client }),
+    database: mongodbAdapter(db),
     emailAndPassword: {
       enabled: true,
     },
