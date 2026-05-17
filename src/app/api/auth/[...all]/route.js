@@ -1,9 +1,4 @@
-export const runtime = "nodejs";
-
+import { auth } from "@/lib/auth";
 import { toNextJsHandler } from "better-auth/next-js";
-import { getAuth } from "@/lib/auth";
 
-const handler = (req) => toNextJsHandler(getAuth())(req);
-
-export const GET = handler;
-export const POST = handler;
+export const { POST, GET } = toNextJsHandler(auth);
