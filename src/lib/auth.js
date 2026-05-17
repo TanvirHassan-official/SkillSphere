@@ -1,27 +1,13 @@
 import { betterAuth } from "better-auth";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { MongoClient } from "mongodb";
+import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
-let authInstance;
+const client = new MongoClient(process.env.MONGODB_URI);
+const db = client.db("skillsphere");
 
-export function getAuth() {
-  if (authInstance) return authInstance;
-
-  const uri = process.env.MONGODB_URI;
-
-  if (!uri) {
-    throw new Error("Missing MONGODB_URI");
-  }
-
-  const client = new MongoClient(uri);
-  const db = client.db("skillsphere");
-
-  authInstance = betterAuth({
-    database: mongodbAdapter(db),
+export const auth = betterAuth({
+    database: mongodbAdapter(db, { client }),
     emailAndPassword: {
-      enabled: true,
-    },
-  }); 
-
-  return authInstance;
-}
+        enabled: true
+    }
+});
