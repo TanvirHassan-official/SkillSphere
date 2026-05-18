@@ -19,6 +19,10 @@ export default function Navbar() {
     const userData = authClient.useSession()
     const user = userData.data?.user
 
+    const handleSignOut = async () =>{
+        await authClient.signOut();
+    }
+
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const isActive = (path) => pathname === path;
@@ -45,8 +49,8 @@ export default function Navbar() {
                             <Link href={href}>
                                 <button
                                     className={`btn px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 ${isActive(href)
-                                            ? "bg-[#386FA4] text-white shadow"
-                                            : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
+                                        ? "bg-[#386FA4] text-white shadow"
+                                        : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
                                         }`}
                                 >
                                     {label}
@@ -71,13 +75,25 @@ export default function Navbar() {
                         </Link>
                     </div>}
 
-                    {
-                        <div className="avatar">
-                            <div className="w-24 rounded-full">
-                                <img 
-                                    src="{user.image}" />
+                    {user &&
+                        <div className='flex gap-4'>
+                            <div className="avatar">
+                                <div className="w-8 rounded-full">
+                                    <img
+                                        src="{user?.image}"
+                                        alt='profile image'
+                                        referrerPolicy='no-referrer'
+                                    />
+
+                                </div>
+                            </div>
+                            <div>
+                                <button onClick={handleSignOut} className='btn btn-error'>
+                                    Sign out
+                                </button>
                             </div>
                         </div>
+
                     }
                 </div>
 
@@ -99,8 +115,8 @@ export default function Navbar() {
                         <Link key={href} href={href} onClick={() => setOpen(false)}>
                             <button
                                 className={`w-full text-left px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${isActive(href)
-                                        ? "bg-[#386FA4] text-white"
-                                        : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
+                                    ? "bg-[#386FA4] text-white"
+                                    : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
                                     }`}
                             >
                                 {label}
