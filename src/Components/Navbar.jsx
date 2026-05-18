@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -7,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { authClient } from '@/lib/auth-client';
 
 const navLinks = [
@@ -16,17 +16,44 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    const userData = authClient.useSession()
-    const user = userData.data?.user
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
 
-    console.log(userData, user);
-    const handleSignOut = async () =>{
+    const handleSignOut = async () => {
         await authClient.signOut();
-    }
+    };
 
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const isActive = (path) => pathname === path;
+
+    const initials = user?.name
+        ?.split(" ")
+        .map((n) => n[0])
+        .join("")
+        .toUpperCase()
+        .slice(0, 2);
+
+    const Avatar = () => (
+        <Link href="/profile">
+            <div className="avatar cursor-pointer">
+                <div className="w-9 rounded-full ring ring-[#386FA4] ring-offset-1 ring-offset-white hover:ring-[#133C55] transition-all duration-300">
+                    {user?.image ? (
+                        <img
+                            src={user.image}
+                            alt="profile"
+                            referrerPolicy="no-referrer"
+                            onError={(e) => { e.currentTarget.style.display = "none"; }}
+                        />
+                    ) : (
+                        <div className="bg-[#386FA4] text-white flex items-center justify-center w-full h-full text-sm font-bold rounded-full">
+                            {initials}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </Link>
+    );
 
     return (
         <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
@@ -61,52 +88,46 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Desktop CTA Buttons */}
-                <div>
-                    {!user && <div className="hidden md:flex items-center gap-3">
-                        <Link href="/signin">
-                            <button className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300 hover:scale-105">
-                                Sign In
+                {/* Desktop CTA */}
+                <div className="hidden md:flex items-center gap-3">
+                    {user ? (
+                        <>
+                            {Avatar}
+                            <button
+                                onClick={handleSignOut}
+                                className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-red-300 text-red-500 hover:bg-red-500 hover:text-white hover:border-transparent transition-all duration-300 gap-2"
+                            >
+                                <FontAwesomeIcon icon={faRightFromBracket} width={14} />
+                                Sign Out
                             </button>
-                        </Link>
-                        <Link href="/signup">
-                            <button className="btn px-4 py-2 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300 hover:scale-105 shadow">
-                                Get Started →
-                            </button>
-                        </Link>
-                    </div>}
-
-                    {user &&
-                        <div className='flex gap-4'>
-                            <div className="avatar">
-                                <div className="w-8 rounded-full">
-                                    <img
-                                        src="{user?.image}"
-                                        alt='profile image'
-                                        referrerPolicy='no-referrer'
-                                    />
-                                    
-                                </div>
-                            </div>
-                            <div>
-                                <button onClick={handleSignOut} className='btn btn-error'>
-                                    Sign out
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/signin">
+                                <button className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300 hover:scale-105">
+                                    Sign In
                                 </button>
-                            </div>
-                        </div>
-
-                    }
+                            </Link>
+                            <Link href="/signup">
+                                <button className="btn px-4 py-2 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300 hover:scale-105 shadow">
+                                    Get Started →
+                                </button>
+                            </Link>
+                        </>
+                    )}
                 </div>
 
-
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="btn md:hidden w-9 h-9 flex items-center justify-center rounded-xl border border-gray-200 text-[#133C55] hover:bg-[#d7eeff] transition-colors duration-300"
-                    onClick={() => setOpen(!open)}
-                    aria-label="Toggle menu"
-                >
-                    ☰
-                </button>
+                {/* Mobile: avatar (if logged in) + hamburger */}
+                <div className="flex md:hidden items-center gap-3">
+                    {user && {Avatar}}
+                    <button
+                        className="btn w-9 h-9 flex items-center justify-center rounded-xl border border-gray-200 text-[#133C55] hover:bg-[#d7eeff] transition-colors duration-300"
+                        onClick={() => setOpen(!open)}
+                        aria-label="Toggle menu"
+                    >
+                        ☰
+                    </button>
+                </div>
             </nav>
 
             {/* Mobile Dropdown */}
@@ -127,16 +148,28 @@ export default function Navbar() {
 
                     <div className="h-px w-full bg-gray-100 my-1" />
 
-                    <Link href="/signin" onClick={() => setOpen(false)}>
-                        <button className="w-full px-4 py-2.5 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300">
-                            Sign In
+                    {user ? (
+                        <button
+                            onClick={() => { handleSignOut(); setOpen(false); }}
+                            className="w-full px-4 py-2.5 rounded-xl font-semibold text-sm border border-red-300 text-red-500 hover:bg-red-500 hover:text-white hover:border-transparent transition-all duration-300 flex items-center gap-2"
+                        >
+                            <FontAwesomeIcon icon={faRightFromBracket} width={14} />
+                            Sign Out
                         </button>
-                    </Link>
-                    <Link href="/signup" onClick={() => setOpen(false)}>
-                        <button className="w-full px-4 py-2.5 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300">
-                            Get Started →
-                        </button>
-                    </Link>
+                    ) : (
+                        <>
+                            <Link href="/signin" onClick={() => setOpen(false)}>
+                                <button className="w-full px-4 py-2.5 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300">
+                                    Sign In
+                                </button>
+                            </Link>
+                            <Link href="/signup" onClick={() => setOpen(false)}>
+                                <button className="w-full px-4 py-2.5 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300">
+                                    Get Started →
+                                </button>
+                            </Link>
+                        </>
+                    )}
                 </div>
             )}
         </div>

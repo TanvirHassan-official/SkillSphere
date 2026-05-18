@@ -8,7 +8,7 @@ const FeaturedCourses = async() => {
 
     const topCourses = courses
         ? [...courses]
-            .slice(6, 3)
+            .slice(6, 9)
         : [];
 
     return (
