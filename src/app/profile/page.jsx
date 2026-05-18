@@ -35,9 +35,6 @@ export default function ProfilePage() {
     );
   }
 
-  if (!user) {
-    redirect("/signin");
-  }
 
   const initials = user?.name
     ?.split(" ")

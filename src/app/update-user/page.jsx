@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faUser, faImage, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import { toast } from "react-toastify";
 
 export default function UpdateUserPage() {
   const router = useRouter();
@@ -33,12 +34,14 @@ export default function UpdateUserPage() {
     setLoading(false);
 
     if (error) {
-      setErrorMsg(error.message || "Something went wrong.");
+      setErrorMsg(error.message || "Try again");
+      toast.error("Something went wrong.");
       return;
     }
 
     setSuccess(true);
-    setTimeout(() => router.push("/profile"), 1500);
+    toast.success("Updated successfully.");
+    setTimeout(() => router.push("/profile"), 1000);
   };
 
   const initials = user?.name

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import GoogleLogin from "@/Components/GoogleLogin";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
     const router = useRouter();
@@ -31,10 +32,11 @@ export default function SignInPage() {
         setLoading(false);
 
         if (error) {
-            setErrorMsg(error.message || "Something went wrong");
+            setErrorMsg(error.message || "Try again");
+            toast.error("Something went wrong");
             return;
         }
-
+        toast.success("Signin successfully.");
         router.push("/");
     };
 
@@ -111,8 +113,12 @@ export default function SignInPage() {
                             )}
                         </button>
                     </form>
-
+                
+                <div className="mt-4 grid gap-2">
+                    <p className="text-center">or</p>
                     <GoogleLogin></GoogleLogin>
+                </div>
+                    
                 </div>
 
                 {/* Footer note */}

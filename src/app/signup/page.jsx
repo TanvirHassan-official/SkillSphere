@@ -7,6 +7,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import GoogleLogin from "@/Components/GoogleLogin";
+import { toast } from "react-toastify";
+
 
 export default function SignUpPage() {
     const router = useRouter();
@@ -32,15 +34,16 @@ export default function SignUpPage() {
             password,
             image,
         });
-        console.log(data);
+
 
         setLoading(false);
 
         if (error) {
-            setErrorMsg(error.message || "Something went wrong");
+            setErrorMsg(error.message || "Try again");
+            toast.error("Something went wrong");
             return;
         }
-
+        toast.success("Signup successfully.<br> Welcome," + name);
         router.push("/");
     };
 
@@ -159,7 +162,10 @@ export default function SignUpPage() {
                         </div>
                     </form>
 
-                    <GoogleLogin></GoogleLogin>
+                    <div className="mt-4 grid gap-2">
+                        <p className="text-center">or</p>
+                        <GoogleLogin></GoogleLogin>
+                    </div>
                 </div>
 
                 {/* Footer note */}
