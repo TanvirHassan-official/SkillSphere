@@ -25,7 +25,7 @@ const Avatar = () => {
                             onError={(e) => { e.currentTarget.style.display = "none"; }}
                         />
                     ) : (
-                        <div className="bg-[#386FA4] text-white flex items-center justify-center w-full h-full text-sm font-bold rounded-full">
+                        <div className="bg-[#386FA4] text-black flex items-center justify-center w-full h-full text-sm font-bold rounded-full">
                             {initials}
                         </div>
                     )}

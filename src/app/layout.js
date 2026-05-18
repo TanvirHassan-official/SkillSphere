@@ -1,10 +1,12 @@
-import { Roboto} from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RobotoFont = Roboto({
 
@@ -22,15 +24,22 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme = "light"
+      data-theme="light"
       className={`${RobotoFont.className}  h-full antialiased`}>
-      
+
       <body>
         <Navbar></Navbar>
         <main className=" mx-auto">{children}</main>
-        
         <Footer></Footer>
-        </body>
+        <ToastContainer  
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          closeOnClick
+          pauseOnHover
+          theme="light"
+        />
+      </body>
     </html>
   );
 }
