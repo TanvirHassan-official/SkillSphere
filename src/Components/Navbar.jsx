@@ -19,6 +19,7 @@ export default function Navbar() {
     const userData = authClient.useSession()
     const user = userData.data?.user
 
+    console.log(userData, user);
     const handleSignOut = async () =>{
         await authClient.signOut();
     }
@@ -84,7 +85,7 @@ export default function Navbar() {
                                         alt='profile image'
                                         referrerPolicy='no-referrer'
                                     />
-
+                                    
                                 </div>
                             </div>
                             <div>
