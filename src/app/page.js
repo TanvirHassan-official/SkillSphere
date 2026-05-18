@@ -4,6 +4,7 @@ import TopCourses from "./top-courses/page";
 import Stats from "@/Components/Stats";
 import Tips from "@/Components/Tips";
 import TopFac from "@/Components/TopFac";
+import FeaturedCourses from "@/Components/FeaturedCourses";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Stats></Stats>
       <TopFac></TopFac>
       <Tips></Tips>
+      <FeaturedCourses></FeaturedCourses>
     </div>
   );
 }
