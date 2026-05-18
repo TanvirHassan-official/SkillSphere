@@ -1,10 +1,13 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStackOverflow} from "@fortawesome/free-brands-svg-icons";
+import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import { authClient } from '@/lib/auth-client';
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -13,6 +16,9 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+    const userData = authClient.useSession()
+    const user = userData.data?.user
+
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const isActive = (path) => pathname === path;
@@ -38,11 +44,10 @@ export default function Navbar() {
                         <li key={href}>
                             <Link href={href}>
                                 <button
-                                    className={`btn px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                                        isActive(href)
+                                    className={`btn px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 ${isActive(href)
                                             ? "bg-[#386FA4] text-white shadow"
                                             : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
-                                    }`}
+                                        }`}
                                 >
                                     {label}
                                 </button>
@@ -52,18 +57,30 @@ export default function Navbar() {
                 </ul>
 
                 {/* Desktop CTA Buttons */}
-                <div className="hidden md:flex items-center gap-3">
-                    <Link href="/signin">
-                        <button className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300 hover:scale-105">
-                            Sign In
-                        </button>
-                    </Link>
-                    <Link href="/signup">
-                        <button className="btn px-4 py-2 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300 hover:scale-105 shadow">
-                            Get Started →
-                        </button>
-                    </Link>
+                <div>
+                    {!user && <div className="hidden md:flex items-center gap-3">
+                        <Link href="/signin">
+                            <button className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-[#3F88C5] text-[#133C55] hover:bg-[#3F88C5] hover:text-white transition-all duration-300 hover:scale-105">
+                                Sign In
+                            </button>
+                        </Link>
+                        <Link href="/signup">
+                            <button className="btn px-4 py-2 rounded-xl font-semibold text-sm bg-[#133C55] text-white hover:bg-[#386FA4] transition-all duration-300 hover:scale-105 shadow">
+                                Get Started →
+                            </button>
+                        </Link>
+                    </div>}
+
+                    {
+                        <div className="avatar">
+                            <div className="w-24 rounded-full">
+                                <img 
+                                    src="{user.image}" />
+                            </div>
+                        </div>
+                    }
                 </div>
+
 
                 {/* Mobile Menu Toggle */}
                 <button
@@ -81,11 +98,10 @@ export default function Navbar() {
                     {navLinks.map(({ href, label }) => (
                         <Link key={href} href={href} onClick={() => setOpen(false)}>
                             <button
-                                className={`w-full text-left px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                                    isActive(href)
+                                className={`w-full text-left px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${isActive(href)
                                         ? "bg-[#386FA4] text-white"
                                         : "text-[#133C55] hover:bg-[#d7eeff] hover:text-[#386FA4]"
-                                }`}
+                                    }`}
                             >
                                 {label}
                             </button>
