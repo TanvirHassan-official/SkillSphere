@@ -2,7 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-
+import { toast } from "react-toastify";
 export default function GoogleLogin() {
   const router = useRouter();
   const handleGoogleLogin = async () => {
@@ -14,11 +14,11 @@ export default function GoogleLogin() {
       {
         onSuccess: (data) => {
           console.log(data);
-          console.log("Google Login Success");
+          toast.success("Google Login Success");
           router.push("/");
         },
         onError: (error) => {
-          console.log("Google Login Failed");
+          toast.error("Google Login Failed");
           console.log(error);
         },
       },
