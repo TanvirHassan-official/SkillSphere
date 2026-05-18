@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
 import { usePathname } from 'next/navigation';
@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { authClient } from '@/lib/auth-client';
+import Avatar from './Avatar';
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -26,34 +27,6 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
     const isActive = (path) => pathname === path;
-
-    const initials = user?.name
-        ?.split(" ")
-        .map((n) => n[0])
-        .join("")
-        .toUpperCase()
-        .slice(0, 2);
-
-    const Avatar = () => (
-        <Link href="/profile">
-            <div className="avatar cursor-pointer">
-                <div className="w-9 rounded-full ring ring-[#386FA4] ring-offset-1 ring-offset-white hover:ring-[#133C55] transition-all duration-300">
-                    {user?.image ? (
-                        <img
-                            src={user.image}
-                            alt="profile"
-                            referrerPolicy="no-referrer"
-                            onError={(e) => { e.currentTarget.style.display = "none"; }}
-                        />
-                    ) : (
-                        <div className="bg-[#386FA4] text-white flex items-center justify-center w-full h-full text-sm font-bold rounded-full">
-                            {initials}
-                        </div>
-                    )}
-                </div>
-            </div>
-        </Link>
-    );
 
     return (
         <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
@@ -92,7 +65,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-3">
                     {user ? (
                         <>
-                            {Avatar}
+                            <Avatar></Avatar>
                             <button
                                 onClick={handleSignOut}
                                 className="btn px-4 py-2 rounded-xl font-semibold text-sm border border-red-300 text-red-500 hover:bg-red-500 hover:text-white hover:border-transparent transition-all duration-300 gap-2"
@@ -119,7 +92,7 @@ export default function Navbar() {
 
                 {/* Mobile: avatar (if logged in) + hamburger */}
                 <div className="flex md:hidden items-center gap-3">
-                    {user && {Avatar}}
+                    {user && <Avatar></Avatar>}
                     <button
                         className="btn w-9 h-9 flex items-center justify-center rounded-xl border border-gray-200 text-[#133C55] hover:bg-[#d7eeff] transition-colors duration-300"
                         onClick={() => setOpen(!open)}
