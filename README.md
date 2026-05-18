@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 SkillSphere — Online Learning Platform
+[![Live Site](https://img.shields.io/badge/Visit-SkillSphere-blue?style=for-the-badge)](https://skillsphere-rosy.vercel.app)
 
-## Getting Started
+## 📌 Overview
 
-First, run the development server:
+**SkillSphere** is a modern online learning platform designed to help users improve their skills through interactive courses and structured learning experiences. Users can explore courses from multiple categories, view detailed course information, authenticate securely, and build their learning journey in a clean and responsive environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The platform focuses on delivering an engaging user experience while maintaining simplicity and accessibility across all devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎯 Purpose
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal of **SkillSphere** is to create a modern and interactive online learning platform where users can discover skill-based courses, improve their knowledge, and access learning resources in a user-friendly environment.
 
-## Learn More
+The platform aims to:
 
-To learn more about Next.js, take a look at the following resources:
+* Provide an organized collection of educational courses
+* Make learning accessible across all devices
+* Deliver a smooth authentication and user experience
+* Help users explore and build skills in different fields
+* Create an engaging and responsive learning ecosystem
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features
 
-## Deploy on Vercel
+### 📚 1. Course Exploration System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Browse a collection of skill-based courses including:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Web Development
+* UI/UX Design
+* Marketing
+* Programming
+* Creative Skills
+
+---
+
+### 🔒 2. Authentication & Protected Routes
+
+Secure authentication system with:
+
+* Email & Password Login
+* User Registration
+* Google Authentication
+* Protected Course Details Page
+* Redirect users back after successful login
+
+Users can safely access private content after authentication.
+
+---
+
+### 🔍 3. Search Functionality
+
+Users can quickly find courses by searching:
+
+* Course title search
+* Dynamic filtering
+* Instant results display
+
+---
+
+### 👤 4. User Profile System
+
+Profile functionality includes:
+
+* View logged-in user information
+* Update profile name
+* Update profile image URL
+* Personalized user experience
+
+---
+
+### 🔔 5. Interactive User Experience
+
+* Toast notifications for actions and authentication
+* Smooth animations using Animate.css
+* Loading spinner
+* Custom not-found page
+* Fully responsive design
+
+---
+
+## 🛠️ Technologies Used
+
+* **Next.js** — Application framework & App Router
+* **MongoDB** — Database management
+* **Tailwind CSS** — Utility-first styling
+* **DaisyUI** — Responsive UI components
+* **JavaScript (ES6+)** — Application logic
+* **React Icons** — Icons and UI enhancement
+* **React Toastify** — Toast notifications
+* **Animate.css** — UI animations
+* **BetterAuth** — Authentication management
+
+---
+
+## 🎯 Project Features
+
+✅ Responsive Navbar & Footer  
+✅ Authentication System (Login/Register/Google Login)  
+✅ Protected Routes  
+✅ Dynamic Course Display  
+✅ Popular Courses Section  
+✅ Trending Courses Section  
+✅ Search Courses by Title  
+✅ Course Details Page  
+✅ User Profile Page  
+✅ Profile Update Feature  
+✅ Loading Animation  
+✅ Toast Notifications  
+✅ Custom 404 Page  
+✅ Mobile, Tablet & Desktop Responsive Design  
+
+---
+
+## 🚀 Pages Included
+
+| Page | Description |
+|-------|-------------|
+| 🏠 Home | Hero section, popular courses, tips, instructors |
+| 📚 All Courses | Display all courses with search functionality |
+| 🔒 Course Details | Detailed course information and curriculum |
+| 👤 My Profile | User information page |
+| ✏️ Update Profile | Update profile details |
+| 🔑 Login | User authentication |
+| 📝 Register | Create new account |
+| ❌ Not Found | Invalid route handling |
+
+---
+
